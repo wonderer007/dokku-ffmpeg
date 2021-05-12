@@ -12,6 +12,7 @@ apt-get install -y software-properties-common
 apt-get install -y --reinstall ca-certificates
 add-apt-repository -y ppa:mc3man/trusty-media
 add-apt-repository -y 'deb [arch=amd64] https://apt-archive.postgresql.org/pub/repos/apt trusty-pgdg main'
+add-apt-repository -y 'deb-src [arch=amd64] https://apt-archive.postgresql.org/pub/repos/apt trusty-pgdg main'
 apt-get -y update
 apt-get install -y --force-yes ffmpeg
 
