@@ -7,18 +7,36 @@ COMMAND=$(cat <<EOF
 echo "-----> install requirements"
 
 export DEBIAN_FRONTEND=noninteractive
+echo "1"
 wget -qO - https://packagecloud.io/dokku/dokku/gpgkey | apt-key add -
+echo "2"
 wget -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
+echo "3"
 
 apt-get -y update
+echo "4"
+
 apt-get install -y software-properties-common
+echo "5"
+
 apt-get install -y --reinstall ca-certificates
+echo "6"
+
 add-apt-repository -y ppa:mc3man/trusty-media
+echo "7"
+
 # add-apt-repository -y 'deb [arch=amd64] https://apt-archive.postgresql.org/pub/repos/apt trusty-pgdg-archive main'
+echo "8"
+
 apt-get -y update
+echo "9"
+
 apt-get install -y --force-yes ffmpeg
+echo "10"
 
 sleep 1 # wait so that docker run has not exited before docker attach
+echo "11"
+
 EOF
 )
 id=$(docker run -d $IMAGE /bin/bash -e -c "$COMMAND")
