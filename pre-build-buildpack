@@ -7,12 +7,13 @@ COMMAND=$(cat <<EOF
 echo "-----> install requirements"
 
 export DEBIAN_FRONTEND=noninteractive
+wget -qO - https://packagecloud.io/dokku/dokku/gpgkey | apt-key add -
+wget -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
 apt-get -y update
 apt-get install -y software-properties-common
 apt-get install -y --reinstall ca-certificates
 add-apt-repository -y ppa:mc3man/trusty-media
 add-apt-repository -y 'deb [arch=amd64] https://apt-archive.postgresql.org/pub/repos/apt trusty-pgdg-archive main'
-add-apt-repository -y 'deb-src [arch=amd64] https://apt-archive.postgresql.org/pub/repos/apt trusty-pgdg-archive main'
 apt-get -y update
 apt-get install -y --force-yes ffmpeg
 
