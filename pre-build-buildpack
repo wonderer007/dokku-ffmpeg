@@ -24,12 +24,6 @@ echo "3.75"
 # apt-get -y update
 echo "4"
 
-apt-get install -y software-properties-common
-echo "5"
-
-apt-get install -y --reinstall ca-certificates
-echo "6"
-
 add-apt-repository -y ppa:mc3man/trusty-media
 echo "7"
 
@@ -38,6 +32,12 @@ echo "8"
 
 apt-get -y update
 echo "9"
+
+apt-get install -y software-properties-common
+echo "5"
+
+apt-get install -y --reinstall ca-certificates
+echo "6"
 
 apt-get install -y --force-yes ffmpeg
 echo "10"
