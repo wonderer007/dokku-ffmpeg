@@ -10,11 +10,13 @@ export DEBIAN_FRONTEND=noninteractive
 echo "1"
 wget -qO - https://packagecloud.io/dokku/dokku/gpgkey | apt-key add -
 echo "2"
+apt-get install ca-certificates
+
 wget -qO - https://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
 wget -qO - https://apt.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 echo "3"
 
-apt-get install ca-certificates
+
 
 apt-get clean
 rm -rf /var/lib/apt/lists/*
