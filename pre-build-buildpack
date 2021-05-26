@@ -29,11 +29,15 @@ if [ -f $DIR/apt-repositories ]; then
     done
 fi
 
+echo "3.8"
+
 if [ -f $DIR/apt-repositories ]; then
     cat $DIR/apt-repositories > /etc/apt/sources.list
     apt-get update
     apt-get install -y software-properties-common
 fi
+
+echo "3.9"
 
 apt-get -y update
 echo "4"
