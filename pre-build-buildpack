@@ -15,13 +15,14 @@ echo "3"
 
 # apt-get -y clean
 # echo "3.25"
-# rm -rf /var/lib/apt/lists/*
-# echo "3.5"
-# apt-get -y clean
+rm -rf /var/lib/apt/lists/*
+echo "3.5"
+apt-get -y clean
 
 echo "3.75"
 
-
+apt-get -y update
+echo "4"
 
 add-apt-repository -y ppa:mc3man/trusty-media
 echo "7"
