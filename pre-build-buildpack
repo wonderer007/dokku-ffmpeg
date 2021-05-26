@@ -37,7 +37,7 @@ if [ -f $DIR/apt-repositories ]; then
     apt-get install -y software-properties-common
 fi
 
-echo top /etc/apt/sources.list
+top /etc/apt/sources.list
 
 echo "3.9"
 
