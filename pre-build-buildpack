@@ -21,7 +21,7 @@ apt-get -y clean
 
 echo "3.75"
 
-apt-get -y update
+sudo apt-get -y update
 echo "4"
 
 add-apt-repository -y ppa:mc3man/trusty-media
