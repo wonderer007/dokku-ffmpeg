@@ -10,34 +10,21 @@ export DEBIAN_FRONTEND=noninteractive
 echo "1"
 wget -qO - https://packagecloud.io/dokku/dokku/gpgkey | apt-key add -
 echo "2"
-wget -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
+wget -qO - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
 echo "3"
 
 apt-get clean
 rm -rf /var/lib/apt/lists/*
 apt-get clean
-apt-get update
-apt-get upgrade
+# apt-get update
+# apt-get upgrade
+
+add-apt-repository -y 'deb [arch=amd64] https://apt-archive.postgresql.org/pub/repos/apt trusty-pgdg-archive main'
+echo "8"
+
 
 echo "3.75"
 
-if [ -f $DIR/apt-repositories ]; then
-    apt-get update
-    apt-get install -y software-properties-common
-    cat "$DIR/apt-repositories" | while read repository; do
-        add-apt-repository -y "\$repository"
-    done
-fi
-
-echo "3.8"
-
-if [ -f $DIR/apt-repositories ]; then
-    cat $DIR/apt-repositories > /etc/apt/sources.list
-    apt-get update
-    apt-get install -y software-properties-common
-fi
-
-echo "3.9"
 
 apt-get -y update
 echo "4"
