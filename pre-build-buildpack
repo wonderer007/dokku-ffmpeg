@@ -25,6 +25,8 @@ echo "3.25"
 
 echo "3.5"
 
+apt-get dist-upgrade
+
 # apt-get clean
 # rm -rf /var/lib/apt/lists/*
 # rm -rf /var/lib/apt/lists/partial/*
