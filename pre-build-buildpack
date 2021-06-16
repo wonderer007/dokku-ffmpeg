@@ -29,7 +29,7 @@ echo "3.25"
 
 echo "3.5"
 
-sudo add-apt-repository --remove 'deb [arch=amd64] http://apt.postgresql.org/pub/repos/ap trusty-pgdg main'
+add-apt-repository --remove 'deb [arch=amd64] http://apt.postgresql.org/pub/repos/ap trusty-pgdg main'
 
 apt-get -y dist-upgrade
 
