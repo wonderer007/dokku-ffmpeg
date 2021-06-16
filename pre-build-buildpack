@@ -29,6 +29,8 @@ echo "3.25"
 
 echo "3.5"
 
+grep -r -i ppa /etc/apt/
+
 apt-get -y dist-upgrade
 
 apt-get clean
