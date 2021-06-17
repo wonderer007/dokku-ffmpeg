@@ -35,7 +35,7 @@ apt-get -y dist-upgrade
 
 apt-get -y clean autoclean
 apt-get autoremove --yes
-rm -rf /var/lib/{apt,dpkg,cache,log}/
+# rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 echo "3.6"
 
