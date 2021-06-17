@@ -39,6 +39,10 @@ apt-get autoremove --yes
 
 tail /etc/apt/sources.list
 
+head -n -1 /etc/apt/sources.list > temp.txt ; mv temp.txt /etc/apt/sources.list
+
+tail /etc/apt/sources.list
+
 echo "3.6"
 
 apt-get clean
