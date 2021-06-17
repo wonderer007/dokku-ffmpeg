@@ -37,6 +37,8 @@ apt-get -y clean autoclean
 apt-get autoremove --yes
 # rm -rf /var/lib/{apt,dpkg,cache,log}/
 
+tail /etc/apt/sources.list
+
 echo "3.6"
 
 apt-get clean
