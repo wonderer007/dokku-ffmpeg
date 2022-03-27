@@ -13,6 +13,7 @@ apt-get -y update
 apt-get install -y software-properties-common
 apt-get install -y --reinstall ca-certificates
 apt-get -y update
+add-apt-repository -y  ppa:jonathonf/ffmpeg-4
 apt-get install -y --force-yes ffmpeg
 
 sleep 1 # wait so that docker run has not exited before docker attach
