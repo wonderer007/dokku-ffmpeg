@@ -10,11 +10,12 @@ grep -v "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" /etc/apt
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get -y update
-apt-get install -y software-properties-common
-apt-get install -y --reinstall ca-certificates
-apt-get -y update
-add-apt-repository -y  ppa:jonathonf/ffmpeg-4
-apt-get install -y --force-yes ffmpeg
+apt-get --yes update
+apt install software-properties-common -y
+add-apt-repository --yes ppa:savoury1/ffmpeg5
+add-apt-repository --yes ppa:savoury1/ffmpeg4
+apt --yes update
+apt --yes full-upgrade
 
 sleep 1 # wait so that docker run has not exited before docker attach
 EOF
