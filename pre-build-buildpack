@@ -16,6 +16,7 @@ add-apt-repository --yes ppa:savoury1/ffmpeg5
 add-apt-repository --yes ppa:savoury1/ffmpeg4
 apt --yes update
 apt --yes full-upgrade
+apt --yes install ffmpeg
 
 sleep 1 # wait so that docker run has not exited before docker attach
 EOF
